@@ -2,12 +2,12 @@
 
 [ $# -gt 0 ] && {
   commitInfo=$1
-}||{
-    commitInfo="update"
+} || {
+  commitInfo="update"
 }
 
 git pull
 git add .
 git commit -m $commitInfo
-git push
-git log|head -n 20
+git push origin main
+git log | head -n 20

@@ -55,7 +55,7 @@ NVMe Management Interface™ (NVMe-MI™) 技术的管理能力对于企业、�
 - NVMe-MI 规范
   NVMe-MI 规范通过 SMBUS/MCTP 和 PCIe/VDMs 接口在操作系统之外管理 NVMe SSD。 NVMe-MI 架构使用基板管理控制器来检查库存、监控错误、跟踪 SMART 日志和耐久性，并通过管理控制台报告这些情况。要了解有关 NVMe-MI 规范的更多信息，我们邀请您阅读我们的 NVMe-MI 技术博客，以更深入地了解其特性和优势。 NVMe-MI 通过提供专门用于管理存储设备的完整规范，真正将 NVMe 标准与其他存储接口区分开来。
 
-![](Error-Reporting-Blog_2.png)
+![](./Error-Reporting-Blog_2.png)
 
 ## 测试
 
@@ -64,7 +64,7 @@ NVMe Management Interface™ (NVMe-MI™) 技术的管理能力对于企业、�
 设备自检命令
 NVMe 1.4 规范第 107 页定义的设备自检命令功能允许主机启动短自检或长时间自检以运行离线诊断。 OEM、ODMS 和系统集成商在将新的 NVMe SSD 集成到更大的系统时经常使用此命令功能。 一个例子是在系统集成商或工厂，他们从 SSD 供应商处获取 SSD 并将其放入更大的服务器中，然后继续运行自检命令以确保驱动器全部正常运行。 NVMe 规范包括一个包含示例设备自检的信息图，如下图所示。
 
-![](Error-Reporting-Blog_3.png)
+![](./Error-Reporting-Blog_3.png)
 
 ## 你如何参与？
 

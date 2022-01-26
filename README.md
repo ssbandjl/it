@@ -1,6 +1,4 @@
-# IT信息技术
-
-# 链接: https://github.com/ssbandjl/it 
+# [IT信息技术](https://github.com/ssbandjl/it)
 
 # 分类
 
@@ -8,7 +6,7 @@
 
 ### SSD
 
-#### [SSD 是如何发生故障的——NVMe™ SSD 管理、错误报告和日志记录功能](./storage/ssd/how-ssds-fail/SSD 是如何发生故障的——NVMe™ SSD 管理、错误报告和日志记录功能.md)
+#### [SSD 是如何发生故障的——NVMe™ SSD 管理、错误报告和日志记录功能](./storage/ssd/how-ssds-fail/SSD是如何发生故障的-NVMe™SSD管理-错误报告和日志记录功能.md)
 
 ## 网络
 

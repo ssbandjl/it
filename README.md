@@ -1,18 +1,26 @@
-# Go-For-It
+# IT信息技术
 
-# 链接: https://github.com/ssbandjl/go-for-it 
+# 链接: https://github.com/ssbandjl/it 
 
-# [点我直达](https://github.com/ssbandjl/go-for-it)
+# 分类
 
+## 存储
 
+### SSD
 
-## 目录树
+#### [SSD 是如何发生故障的——NVMe™ SSD 管理、错误报告和日志记录功能](./storage/ssd/how-ssds-fail/SSD 是如何发生故障的——NVMe™ SSD 管理、错误报告和日志记录功能.md )
 
-- **分类**
-  + 序列化
-    * Protobuf
-      - 入门
-        + [Protobuf快速入门](./serialize/protobuf/README.md)
+## 网络
+
+## 计算
+
+## 其他
+
+  #### 序列化
+ - Protobuf
+   - 入门
+     - [Protobuf快速入门](./serialize/protobuf/README.md)
+
   + 解码
     * [使用mapstructure库将map解码为结构体或结构转为map](./decode/mapstructure/README.md)
   + 数据库

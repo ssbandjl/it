@@ -13,6 +13,15 @@
 ### SSD
 
 #### [SSD 是如何发生故障的——NVMe™ SSD 管理、错误报告和日志记录功能](./storage/ssd/how-ssds-fail/SSD是如何发生故障的-NVMe™SSD管理-错误报告和日志记录功能.md)
+#### [SSD 是如何发生故障的——NVMe™ SSD 管理、错误报告和日志记录功能](./storage/ssd/how-ssds-fail/SSD是如何发生故障的-NVMe™SSD管理-错误报告和日志记录功能.md)
+
+### IO
+
+#### 异步IO(AIO)
+
+##### [怎样使用Linux异步IO(AIO)](./linux/io/aio/怎样使用Linux异步IO(AIO).md)
+
+
 
 ## 网络
 
@@ -40,6 +49,26 @@
         + [PostgreSQL增删改查](./db/postgresql/curd/PostgresqlCRUD.md)
       - 备份还原
         + [PostgreSQL备份还原](./db/postgresql/backupAndRestore/README.md)
+
+  #### 变更日志Changelog
+##### 自动生成
+
+参考文档:[常规变更日志命令行conventional-changelog-cli](https://github.com/conventional-changelog/conventional-changelog/tree/master/packages/conventional-changelog-cli)
+
+[**AngularJS Git Commit Message Conventions**](https://docs.google.com/document/d/1QrDFcIiPjSLDn3EL15IJygNPiHORgU1_OOAqWjiDU5Y/edit#heading=h.uyo6cb12dt6w)
+
+提交约束:https://github.com/conventional-changelog/commitlint
+
+步骤:
+
+1. Make changes
+2. Commit those changes
+3. Make sure Travis turns green
+4. Bump version in `package.json`
+5. `conventionalChangelog`
+6. Commit `package.json` and `CHANGELOG.md` files
+7. Tag
+8. Push
 
 ## K8S
 

@@ -2,7 +2,19 @@
 
 请注意，Linux AIO 现在包含在 io_uring API（教程，LWN 覆盖范围）中。 下面的解释对旧内核最有用。
 
-参考链接: https://github.com/littledan/linux-aio
+参考链接: 
+
+Linux-aio:https://github.com/littledan/linux-aio
+
+Man: https://man7.org/linux/man-pages/man2/io_submit.2.html
+
+## 概念
+
+## iocb(IO控制块结构)
+
+linux/aio_abi.h中定义的iocb（I/O控制块）结构, 用于定义控制 I/O 操作的参数
+
+
 
 ## Introduction 简介
 
@@ -45,7 +57,7 @@ Linux AIO 模型使用如下：
 1. 以事件完成对象的形式从 I/O 上下文中获取完成，
 1. 根据需要返回步骤 2。
 
-## I/O context
+## I/O context和iocb(control block)控制块
 `io_context_t` is a pointer-sized opaque datatype that represents an “AIO context”. It can be safely passed around by value. Requests in the form of a `struct iocb` are submitted to an `io_context_t` and completions are read from the `io_context_t`. Internally, this structure contains a queue of completed requests. The length of the queue forms an upper bound on the number of concurrent requests which may be submitted to the `io_context_t`.
 
 `io_context_t` 是一个指针大小的不透明数据类型，表示“AIO 上下文”。 它可以通过值安全地传递。 `struct iocb` 形式的请求被提交到 `io_context_t` 并从 `io_context_t` 读取完成。 在内部，此结构包含已完成请求的队列。 队列的长度构成了可以提交给 io_context_t 的并发请求数的上限。
@@ -112,8 +124,8 @@ The meaning of the fields is as follows: data is a pointer to a user-defined obj
 The convenience functions `io_prep_pread` and `io_prep_pwrite` can be used to initialize a `struct iocb`.
 New operations are sent to the device with `io_submit`.
 
-便利函数 `io_prep_pread` 和 `io_prep_pwrite` 可用于初始化 `struct iocb`。
-新操作通过 `io_submit` 发送到设备。
+便利函数 `io_prep_pread` 和 `io_prep_pwrite` 可用于初始化IO控制块 `iocb`。
+新操作通过 `io_submit` 发送到设备
 
 ```c
 int io_submit(io_context_t ctx, long nr, struct iocb *ios[]);
@@ -134,7 +146,7 @@ When used under the right conditions, `io_submit` should not block. However, whe
 ## Processing results 处理结果
 Completions read from an `io_context_t` are of the type `struct io_event`, which contains the following relevant fields.
 
-从 `io_context_t` 读取的完成属于 `struct io_event` 类型，其中包含以下相关字段。
+从 `io_context_t` 读取的完成属于 `struct io_event` 类型(IO事件)，其中包含以下相关字段。
 
 ```c
 struct io_event {
